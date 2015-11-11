@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "MapViewController.h"
 
 @interface DetailViewController ()
 
@@ -26,6 +27,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"mapSegue"]) {
+        
+        
+        
+        MapViewController *controller = (MapViewController *)[segue destinationViewController];
+        
+        
+        controller.movie= self.movie;
+    }
 }
 
 

@@ -18,6 +18,11 @@
 		DA7086D81BF1343F00B48A5F /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7086D71BF1343E00B48A5F /* Movie.m */; };
 		DA7086DB1BF14B9900B48A5F /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7086DA1BF14B9900B48A5F /* MovieCollectionViewCell.m */; };
 		DA7086DE1BF1628500B48A5F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7086DD1BF1628500B48A5F /* DetailViewController.m */; };
+		DA7086E01BF2744900B48A5F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7086DF1BF2744900B48A5F /* CoreLocation.framework */; };
+		DA7086E21BF2745100B48A5F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7086E11BF2745100B48A5F /* MapKit.framework */; };
+		DA7086E51BF278E000B48A5F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7086E41BF278E000B48A5F /* MapViewController.m */; };
+		DA7086E81BF2798900B48A5F /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7086E71BF2798900B48A5F /* LocationManager.m */; };
+		DA7086EB1BF2824100B48A5F /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7086EA1BF2824100B48A5F /* Theatre.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,15 @@
 		DA7086DA1BF14B9900B48A5F /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewCell.m; sourceTree = "<group>"; };
 		DA7086DC1BF1628500B48A5F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		DA7086DD1BF1628500B48A5F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		DA7086DF1BF2744900B48A5F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DA7086E11BF2745100B48A5F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DA7086E31BF278E000B48A5F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		DA7086E41BF278E000B48A5F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		DA7086E61BF2798900B48A5F /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		DA7086E71BF2798900B48A5F /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		DA7086E91BF2824100B48A5F /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theatre.h; sourceTree = "<group>"; };
+		DA7086EA1BF2824100B48A5F /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theatre.m; sourceTree = "<group>"; };
+		DA7086ED1BF2C32400B48A5F /* Vancouver.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Vancouver.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7086E21BF2745100B48A5F /* MapKit.framework in Frameworks */,
+				DA7086E01BF2744900B48A5F /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +106,9 @@
 		DA7086971BF12FAA00B48A5F = {
 			isa = PBXGroup;
 			children = (
+				DA7086ED1BF2C32400B48A5F /* Vancouver.gpx */,
+				DA7086E11BF2745100B48A5F /* MapKit.framework */,
+				DA7086DF1BF2744900B48A5F /* CoreLocation.framework */,
 				DA7086A21BF12FAA00B48A5F /* RottenMangoes */,
 				DA7086BC1BF12FAA00B48A5F /* RottenMangoesTests */,
 				DA7086C71BF12FAA00B48A5F /* RottenMangoesUITests */,
@@ -116,8 +135,14 @@
 				DA7086AA1BF12FAA00B48A5F /* ViewController.m */,
 				DA7086DC1BF1628500B48A5F /* DetailViewController.h */,
 				DA7086DD1BF1628500B48A5F /* DetailViewController.m */,
+				DA7086E31BF278E000B48A5F /* MapViewController.h */,
+				DA7086E41BF278E000B48A5F /* MapViewController.m */,
 				DA7086D91BF14B9900B48A5F /* MovieCollectionViewCell.h */,
 				DA7086DA1BF14B9900B48A5F /* MovieCollectionViewCell.m */,
+				DA7086E61BF2798900B48A5F /* LocationManager.h */,
+				DA7086E71BF2798900B48A5F /* LocationManager.m */,
+				DA7086E91BF2824100B48A5F /* Theatre.h */,
+				DA7086EA1BF2824100B48A5F /* Theatre.m */,
 				DA7086D61BF1343E00B48A5F /* Movie.h */,
 				DA7086D71BF1343E00B48A5F /* Movie.m */,
 				DA7086AC1BF12FAA00B48A5F /* Main.storyboard */,
@@ -285,12 +310,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7086E81BF2798900B48A5F /* LocationManager.m in Sources */,
 				DA7086AB1BF12FAA00B48A5F /* ViewController.m in Sources */,
 				DA7086DB1BF14B9900B48A5F /* MovieCollectionViewCell.m in Sources */,
 				DA7086A81BF12FAA00B48A5F /* AppDelegate.m in Sources */,
 				DA7086D81BF1343F00B48A5F /* Movie.m in Sources */,
 				DA7086A51BF12FAA00B48A5F /* main.m in Sources */,
+				DA7086EB1BF2824100B48A5F /* Theatre.m in Sources */,
 				DA7086DE1BF1628500B48A5F /* DetailViewController.m in Sources */,
+				DA7086E51BF278E000B48A5F /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

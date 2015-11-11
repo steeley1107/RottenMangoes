@@ -14,6 +14,7 @@
 @property (nonatomic) NSURLSessionTask *task;
 @property (nonatomic) Movie *movie;
 
+@property (weak, nonatomic) IBOutlet UILabel *movieTitle;
 
 -(void)downloadMovieImage;
 

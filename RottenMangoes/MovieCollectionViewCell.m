@@ -30,14 +30,13 @@
     if (!self.movie.image) {
         
         NSURL *thumbnailUrl = [self.movie convertToLargeImageURLFromString:self.movie.imageURLString];
-        
+
         NSURLSession *session = [NSURLSession sharedSession];
         self.task = [session dataTaskWithURL:thumbnailUrl completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             
             if (error.code == NSURLErrorCancelled) {
                 return;
             }
-            
             if (!error) {
                 UIImage *image = [UIImage imageWithData:data];
                 self.movie.image = image;
@@ -47,8 +46,7 @@
                 });
             }
         }];
-        
-        
+
         [self.task resume];
     }
 }

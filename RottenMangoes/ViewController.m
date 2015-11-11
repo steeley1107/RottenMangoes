@@ -49,7 +49,7 @@
     Movie *movie = [self.moviesArray objectAtIndex:indexPath.item];
     
     cell.movie = movie;
-    
+    cell.movieTitle.text = movie.title;
     [cell downloadMovieImage];
     
     return cell;

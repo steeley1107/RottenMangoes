@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Now Playing-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -40,20 +40,32 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
                                                     <animations/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRd-7V-4Yp">
+                                                    <rect key="frame" x="0.0" y="229.5" width="150" height="20.5"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="2Wm-g7-1iw" firstAttribute="top" secondItem="NuB-8C-SiD" secondAttribute="top" id="Asr-nk-rtb"/>
                                             <constraint firstItem="2Wm-g7-1iw" firstAttribute="leading" secondItem="NuB-8C-SiD" secondAttribute="leading" id="FTG-rL-GCn"/>
+                                            <constraint firstItem="KRd-7V-4Yp" firstAttribute="leading" secondItem="NuB-8C-SiD" secondAttribute="leading" id="M7g-5Y-Ls4"/>
+                                            <constraint firstAttribute="bottom" secondItem="KRd-7V-4Yp" secondAttribute="bottom" id="PCX-j0-nad"/>
                                             <constraint firstAttribute="trailing" secondItem="2Wm-g7-1iw" secondAttribute="trailing" id="YbQ-Bx-fGU"/>
                                             <constraint firstAttribute="bottom" secondItem="2Wm-g7-1iw" secondAttribute="bottom" id="d9M-N8-7j3"/>
+                                            <constraint firstAttribute="trailing" secondItem="KRd-7V-4Yp" secondAttribute="trailing" id="zL5-6f-sdN"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="2Wm-g7-1iw" id="dQ5-f1-mtV"/>
+                                            <outlet property="movieTitle" destination="KRd-7V-4Yp" id="gvO-Xd-sah"/>
                                             <segue destination="WSU-HD-NfL" kind="show" identifier="detailSegue" id="Cd8-st-coX"/>
                                         </connections>
                                     </collectionViewCell>
@@ -73,7 +85,7 @@
                             <constraint firstItem="2Ax-Tz-Ofu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hcd-nE-BGQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Emp-7m-M4x"/>
+                    <navigationItem key="navigationItem" title="Now Playing" id="Emp-7m-M4x"/>
                     <connections>
                         <outlet property="collectionView" destination="2Ax-Tz-Ofu" id="xYX-aF-27c"/>
                     </connections>
@@ -115,6 +127,14 @@
                                     <constraint firstAttribute="width" secondItem="8S5-XN-fv7" secondAttribute="height" multiplier="2:3" id="h65-jX-xue"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8k3-mn-UFT">
+                                <rect key="frame" x="243" y="560" width="115" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Theaters Nearby"/>
+                                <connections>
+                                    <segue destination="g30-tw-dAL" kind="show" identifier="mapSegue" id="TdB-GZ-04M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -124,7 +144,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="8S5-XN-fv7" secondAttribute="trailing" constant="50" id="6He-0z-A3e"/>
                             <constraint firstItem="hbS-bO-GjL" firstAttribute="leading" secondItem="kHG-qs-3eE" secondAttribute="leadingMargin" id="BGd-Yd-eWG"/>
                             <constraint firstItem="8S5-XN-fv7" firstAttribute="leading" secondItem="kHG-qs-3eE" secondAttribute="leadingMargin" constant="50" id="R8e-Eg-XLM"/>
+                            <constraint firstItem="bsQ-GG-SLT" firstAttribute="top" secondItem="8k3-mn-UFT" secondAttribute="bottom" constant="10" id="VpC-e3-nZ4"/>
                             <constraint firstItem="8S5-XN-fv7" firstAttribute="top" secondItem="SBy-K0-TlV" secondAttribute="bottom" id="W75-1k-mrh"/>
+                            <constraint firstItem="8k3-mn-UFT" firstAttribute="centerX" secondItem="kHG-qs-3eE" secondAttribute="centerX" id="hDA-a1-Xmf"/>
                             <constraint firstItem="era-LF-CXB" firstAttribute="centerX" secondItem="kHG-qs-3eE" secondAttribute="centerX" id="jo7-g9-oXv"/>
                             <constraint firstItem="hbS-bO-GjL" firstAttribute="centerX" secondItem="kHG-qs-3eE" secondAttribute="centerX" id="mK9-S5-pdc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hbS-bO-GjL" secondAttribute="trailing" id="nfk-yv-6nc"/>
@@ -139,6 +161,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBS-Rg-r70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1580" y="-370"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="SX9-lO-lIg">
+            <objects>
+                <viewController id="g30-tw-dAL" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yqU-7y-grl"/>
+                        <viewControllerLayoutGuide type="bottom" id="jee-QX-xrL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zuu-I5-yXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FDl-jT-ZLJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="g30-tw-dAL" id="bd6-gQ-hOT"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FDl-jT-ZLJ" firstAttribute="top" secondItem="zuu-I5-yXQ" secondAttribute="top" id="d2C-c2-lPC"/>
+                            <constraint firstAttribute="trailing" secondItem="FDl-jT-ZLJ" secondAttribute="trailing" id="mps-Fq-b5R"/>
+                            <constraint firstItem="jee-QX-xrL" firstAttribute="top" secondItem="FDl-jT-ZLJ" secondAttribute="bottom" id="pDD-m5-Cu9"/>
+                            <constraint firstItem="FDl-jT-ZLJ" firstAttribute="leading" secondItem="zuu-I5-yXQ" secondAttribute="leading" id="xeY-mZ-qxs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="FDl-jT-ZLJ" id="Gur-lT-onE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FDn-4h-VD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2261" y="-370"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="437-Eq-rlm">
